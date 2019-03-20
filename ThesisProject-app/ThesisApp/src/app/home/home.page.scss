@@ -2,7 +2,88 @@ ion-content {
   --ion-background-color: #f2ebd9;
 }
 
-.logo ion-img {
-  width: 100px;
-  height: 100px;
+a {
+
+	color: #4C9CF1;
+	text-decoration: none;
+	font-weight: bold;
+
 }
+
+a:hover {
+
+	color: #444;
+
+}
+
+img {
+  width: 50%;
+}
+
+header{
+  background: #f2ebd9;
+	width: 100%;
+	height: 76px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 4px solid #f2ebd9;
+	z-index: 100;
+}
+
+.logo {
+  margin-top: -10px;
+  float: left;
+  min-width: 100px;
+  min-height: 100px;
+  background: url(/assets/logo/learning-management-system.png) no-repeat center;
+  display: block;
+}
+
+nav {
+  float: right;
+  padding: 20px;
+}
+
+#menu-icon {
+  display: hidden;
+  width: 40px;
+  height: 40px;
+}
+
+a:hover#menu-icon {
+
+	background-color: #444;
+	border-radius: 4px 4px 0 0;
+
+}
+
+ul {
+
+	list-style: none;
+
+}
+
+li {
+
+	display: inline-block;
+	float: left;
+	padding: 10px
+
+}
+
+.current {
+
+	color: #2262AD;
+
+}
+
+
+/* .points {
+  background-color: #14DD61;
+  color: #ffffff;
+  margin-left: 100px;
+  margin-top: -5px;
+  border-radius: 15px;
+  font-family: 'VisbyRoundCF-Medium';
+} */
