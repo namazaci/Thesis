@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },  { path: 'role', loadChildren: './role/role.module#RolePageModule' },
+  { path: 'message', loadChildren: './message/message.module#MessagePageModule' },
+  { path: 'logout', loadChildren: './logout/logout.module#LogoutPageModule' },
+  { path: 'logout', loadChildren: './logout/logout.module#LogoutPageModule' }
+
 ];
 
 @NgModule({
