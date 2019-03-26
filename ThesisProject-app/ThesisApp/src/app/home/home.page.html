@@ -1,142 +1,54 @@
-<header>
-  <a href="#/home/home.page.html" class="logo"></a>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons class="logo">
+        <ion-button [routerLink]="['/home']"> 
+          <ion-img src="/assets/logo/learning-management-system.png"></ion-img>
+        </ion-button>
+    </ion-buttons>
+    <ion-buttons class="points" slot="end">
+      <ion-button fill="solid" color="secondary">
+          Points
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons class="log-out" slot="end">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-  <nav>
-    <a href="#" id="menu-icon"></a>
-
-    <button class="btn btn-success">Points</button>
-
-    <ul>
-      <div class="dropdown">
-        <button class="dropbtn">Role 
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <li class="list"><a href="#"> Instructor</a></li>
-            <li class="list"><a href="#"> Student</a></li>
-          </div>
-      </div>
-
-      <div class="dropdown">
-        <button class="dropbtn">Message 
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <li class="list"><a href="#"> Send Message</a></li>
-            <li class="list"><a href="#"> Inbox</a></li>
-          </div>
-      </div>
-
-      <li><a href="#" class="help"> Help</a></li>
-      <a href="#" class="logout"><i class="fa fa-sign-out"></i></a>
-    </ul>
-  </nav>
-</header>
-
-<body>
-  <div class="container">
-    <input type="text" placeholder="Search...">
-    <div class="search"></div>
-      <div class="tl-microstats-section hidden-phone" style="visibility: visible;
-      background-color: rgb(239, 249, 255);margin-top: 100px; margin-left: 14px;margin-right: 13px;
-      border-color: rgb(224, 243, 255); min-width: 270%">
-        <div class="item tl-grid-mode-filter tl-cursor-pointer"
-        data-filter="progress" title="Show courses in progress"
-        style="border-color: rgb(224, 243, 255);">
-          <div class="item-data">
-            <div class="item-value" data-value="7" title="7">7</div>
-            <div class="item-caption">Courses in progress</div>
-          </div>
-        </div>
-        <div class="item tl-cursor-default" style="border-color: rgb(224, 243, 255);">
-          <div class="item-data">
-            <div class="item-value" data-value="0" title="0">0</div>
-            <div class="item-caption">Completed courses</div>
-          </div>
-        </div>
-        <div class="item tl-cursor-default" style="border-color: rgb(224, 243, 255);">
-          <div class="item-data">
-            <div class="item-value" data-value="2m" title="2m">2m</div>
-            <div class="item-caption">Training Time</div>
-          </div>
-        </div>
-        <div class="item microstats-gamification-widget-item tl-cursor-pointer" data-gamificationwidgetrow="#badges-row" 
-        data-gamificationwidgetgoto="mybadges" title="Badges" style="border-color: rgb(224, 243, 255);">
-          <div class="item-data">
-            <div class="item-value" data-value="0" title="0">0</div>
-            <div class="item-caption">badges</div>
-          </div>
-        </div>
-        <div class="item microstats-gamification-widget-item tl-cursor-pointer" data-gamificationwidgetrow="#points-row" 
-        data-gamificationwidgetgoto="leaderboard" title="Points leaderboard" style="border-color: rgb(224, 243, 255);">
-          <div class="item-data">
-            <div class="item-value" data-value="75" title="75">75</div>
-            <div class="item-caption">points</div>
-          </div>
-        </div>
-      </div>
-
-      <div id="tl-dashboard-course-wrapper" class="hide" style="display: block; margin-left: 20px;">
-        <div class="span3 tl-grid-dashboard-course-wrapper" data-coursesset="0">
-          <div class="tl-grid-dashboard-image-wrapper text-center">
-            <a href="https://namazaci.talentlms.com/learner/course/id:123">
-                <img class="avatar-square" src="https://d3j0t7vrtr92dk.cloudfront.net/samples/1455092883_photodune-4870538-opportunity-m.png?" alt="">
-            </a>
-            <div class="avatar-square">
-              <i class="icon-play" title="Start or resume course"
-              onclick="location='https://namazaci.talentlms.com/learner/course/id:123'"></i>
-              <i class="icon-info-circle tl-course-info" title="Course info" 
-              data-url="https://namazaci.talentlms.com/course/info/course_id:123"></i>
-            </div>
-          </div>
-          <div class="tl-grid-dashboard-course-title text-center">
-            <div class="coursename tl-bold-item tl-ellipsis">
-              <a href="https://namazaci.talentlms.com/learner/course/id:123">
-                <span title="Introduction to TalentLMS (SAMP1)" class="tl-formatted-course-name">
-                  "Introduction to TalentLMS"
-                  <span class="tl-formatted-course-code">(SAMP1)</span>
-                </span>
-              </a>
-            </div>
-            <div class="coursestatus">
-              <span class="label label-progress tl-label-progress text-left tl-cursor-pointer tl-grid-mode-filter"
-              data-filter="progress" title="Show courses in progress">
-                <span class="label label-success" style="width: 13.5px;">27%</span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="span3 tl-grid-dashboard-course-wrapper" data-coursesset="0">
-          <div class="tl-grid-dashboard-image-wrapper text-center">
-            <a href="https://namazaci.talentlms.com/learner/course/id:123">
-                <img class="avatar-square" src="https://d3j0t7vrtr92dk.cloudfront.net/samples/1455093219_photodune-5235045-online-business-xs.png?" alt="">
-            </a>
-            <div class="avatar-square">
-              <i class="icon-play" title="Start or resume course"
-              onclick="location='https://namazaci.talentlms.com/learner/course/id:124'"></i>
-              <i class="icon-info-circle tl-course-info" title="Course info" 
-              data-url="https://namazaci.talentlms.com/course/info/course_id:124"></i>
-            </div>
-          </div>
-          <div class="tl-grid-dashboard-course-title text-center">
-            <div class="coursename tl-bold-item tl-ellipsis">
-              <a href="https://namazaci.talentlms.com/learner/course/id:124">
-                <span title="Introduction to TalentLMS (SAMP1)" class="tl-formatted-course-name">
-                  "Advanced features of TalentLMS"
-                  <span class="tl-formatted-course-code">(SAMP2)</span>
-                </span>
-              </a>
-            </div>
-            <div class="coursestatus">
-              <span class="label label-progress tl-label-progress text-left tl-cursor-pointer tl-grid-mode-filter"
-              data-filter="progress" title="Show courses in progress">
-                <span class="label label-success" style="width: 0px;">0%</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-</body>
-  
-  
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/shapes.svg"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>Get Started</ion-card-subtitle>
+        <ion-card-title>Welcome to Ionic</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label>Resources</ion-label>
+      </ion-list-header>
+      <ion-item href="https://ionicframework.com/docs/">
+        <ion-icon slot="start" color="medium" name="book"></ion-icon>
+        <ion-label>Ionic Documentation</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
+        <ion-icon slot="start" color="medium" name="build"></ion-icon>
+        <ion-label>Scaffold Out Your App</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/layout/structure">
+        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
+        <ion-label>Change Your App Layout</ion-label>
+      </ion-item>
+      <ion-item href="https://ionicframework.com/docs/theming/basics">
+        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
+        <ion-label>Theme Your App</ion-label>
+      </ion-item>
+    </ion-list>
+</ion-content>
