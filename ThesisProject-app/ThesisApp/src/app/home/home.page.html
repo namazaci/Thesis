@@ -5,7 +5,7 @@
     </ion-buttons>
     <ion-buttons class="logo">
         <ion-button [routerLink]="['/home']"> 
-          <ion-img src="/assets/logo/learning-management-system.png"></ion-img>
+          Home
         </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -57,7 +57,7 @@
       </ion-col>
       <ion-col>
         <ion-card class="course2" no-margin class="activated">
-          <ion-img src="/assets/courses/course1.png"></ion-img>
+          <ion-img src="/assets/courses/course2.png"></ion-img>
           <ion-item [routerLink]="['/course']" class="activated">
             <ion-label>Advance features of TalentLMS</ion-label>
             <ion-ripple-effect>testing</ion-ripple-effect>
@@ -69,7 +69,7 @@
     <ion-row>
       <ion-col>
         <ion-card class="course3" no-margin class="activated">
-          <ion-img src="/assets/courses/course1.png"></ion-img>
+          <ion-img src="/assets/courses/course3.png"></ion-img>
           <ion-item [routerLink]="['/course']" class="activated">
             <ion-label>Content and TalentLMS</ion-label>
           </ion-item>
@@ -78,7 +78,7 @@
       </ion-col>
       <ion-col>
         <ion-card class="course4" no-margin class="activated">
-          <ion-img src="/assets/courses/course1.png"></ion-img>
+          <ion-img src="/assets/courses/course4.png"></ion-img>
           <ion-item [routerLink]="['/course']" class="activated">
             <ion-label>eLearning Basics</ion-label>
           </ion-item>
@@ -87,40 +87,4 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-grid class="progress">
-      <ion-row>
-        <ion-col>
-          <ion-item [routerLink]="['/course']" class="activated">
-            <ion-icon name="bookmark" slot="start"></ion-icon>
-            <ion-label>Course Catalog</ion-label>
-          </ion-item>
-        </ion-col>
-        <ion-col>
-          <ion-item [routerLink]="['/progress']" class="activated">
-            <ion-icon name="podium" slot="start"></ion-icon>
-            <ion-label>Progress</ion-label>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-item [routerLink]="['/course']" class="activated">
-            <ion-icon name="people" slot="start"></ion-icon>
-            <ion-label>Join Group</ion-label>
-          </ion-item>
-        </ion-col>
-        <ion-col>
-          <ion-item [routerLink]="['/discussion']" class="activated">
-            <ion-icon name="chatbubbles" slot="start"></ion-icon>
-            <ion-label>Discussions</ion-label>
-          </ion-item>
-        </ion-col>
-        <ion-col>
-            <ion-item [routerLink]="['/calendar']" class="activated">
-              <ion-icon name="calendar" slot="start"></ion-icon>
-              <ion-label>Calendar</ion-label>
-            </ion-item>
-          </ion-col>
-      </ion-row>
-    </ion-grid>
 </ion-content>
