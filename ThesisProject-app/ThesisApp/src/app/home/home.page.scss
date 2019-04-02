@@ -17,14 +17,34 @@ ion-searchbar {
   --ion-background-color: #ffffff;
 }
 
-ion-card{
-  --ion-background-color: #ffffff;
-} 
-
-.course2 ion-card > ion-img:hover{
-  --ion-background-color:#000000;
-  --ion-opacity: 70%;
+.dashboard .section1{
+  margin-left: 5%;
+  --width: 10%;
 }
+.dashboard .section1 ion-button .dash{
+  margin-top: 5px;
+}
+
+
+.dashboard .section1 ion-button .dash_1{
+  margin-top: 50px;
+  margin-left: -15px;
+  font-size: 14px;
+}
+
+
+.dashboard .section2{
+  margin-left: 20%;
+}
+
+.dashboard .section3{
+  margin-left: 20%;
+}
+
+.dashboard .section4{
+  margin-left: 20%;
+}
+
 /* .logo ion-buttons .points {
   margin-left: -100px;
 } */
