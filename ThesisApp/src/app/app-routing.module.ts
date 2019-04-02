@@ -14,7 +14,14 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'role', loadChildren: './role/role.module#RolePageModule' },
+  { path: 'message', loadChildren: './message/message.module#MessagePageModule' },
+  { path: 'course', loadChildren: './course/course.module#CoursePageModule' },  { path: 'progress', loadChildren: './progress/progress.module#ProgressPageModule' },
+  { path: 'discussion', loadChildren: './discussion/discussion.module#DiscussionPageModule' },
+  { path: 'calendar', loadChildren: './calendar/calendar.module#CalendarPageModule' }
+
+
 ];
 
 @NgModule({
