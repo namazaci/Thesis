@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-import { Platform, AlertController } from '@ionic/angular';
+import { Platform, AlertController, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { link } from 'fs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -52,7 +52,9 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private router: Router
+
   ) {
     this.initializeApp();
   }
@@ -86,6 +88,7 @@ export class AppComponent {
         {
           text: 'Join Group',
           handler: () => {
+            this.router.navigateByUrl('/course');
             console.log('Confirm Ok');
           }
         },
