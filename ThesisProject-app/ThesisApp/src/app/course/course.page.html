@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>course</ion-title>
   </ion-toolbar>
 </ion-header>
+    
 
 <ion-content padding>
-
+    <ion-list>
+        <ion-item [routerLink]="['/introduction-to-lms']" class="activated">
+          <ion-label>Introduction to TalentLMS</ion-label>
+        </ion-item>
+        <ion-item class="activated">
+          <ion-label>Advance features of TalentLMS</ion-label>
+        </ion-item>
+        <ion-item class="activated">
+          <ion-label>Content and TalentLMS</ion-label>
+        </ion-item>
+        <ion-item class="activated">
+          <ion-label>eLearning Basics</ion-label>
+        </ion-item>
+      </ion-list>
 </ion-content>

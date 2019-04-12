@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Platform, AlertController, NavController } from '@ionic/angular';
+import { Platform, AlertController} from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router } from '@angular/router';
