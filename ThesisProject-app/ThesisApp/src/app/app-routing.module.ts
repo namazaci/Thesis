@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'progress', loadChildren: './progress/progress.module#ProgressPageModule' },
   { path: 'discussion', loadChildren: './discussion/discussion.module#DiscussionPageModule' },
   { path: 'calendar', loadChildren: './calendar/calendar.module#CalendarPageModule' },
-  { path: 'introduction-to-lms', loadChildren: './introduction-to-lms/introduction-to-lms.module#IntroductionToLMSPageModule' }
+  { path: 'introduction-to-lms', loadChildren: './course/introduction-to-lms/introduction-to-lms.module#IntroductionToLMSPageModule' },  { path: 'advance', loadChildren: './advance/advance.module#AdvancePageModule' }
+
 
 
 
