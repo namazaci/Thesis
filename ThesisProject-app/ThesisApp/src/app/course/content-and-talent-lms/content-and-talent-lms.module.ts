@@ -5,12 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AdvancePage } from './advance.page';
+import { ContentAndTalentLMSPage } from './content-and-talent-lms.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: AdvancePage
+    component: ContentAndTalentLMSPage
   }
 ];
 
@@ -21,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [AdvancePage]
+  declarations: [ContentAndTalentLMSPage]
 })
-export class AdvancePageModule {}
+export class ContentAndTalentLMSPageModule {}

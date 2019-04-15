@@ -21,7 +21,12 @@ const routes: Routes = [
   { path: 'progress', loadChildren: './progress/progress.module#ProgressPageModule' },
   { path: 'discussion', loadChildren: './discussion/discussion.module#DiscussionPageModule' },
   { path: 'calendar', loadChildren: './calendar/calendar.module#CalendarPageModule' },
-  { path: 'introduction-to-lms', loadChildren: './course/introduction-to-lms/introduction-to-lms.module#IntroductionToLMSPageModule' },  { path: 'advance', loadChildren: './advance/advance.module#AdvancePageModule' }
+  { path: 'introduction-to-lms', loadChildren: './course/introduction-to-lms/introduction-to-lms.module#IntroductionToLMSPageModule' },
+  { path: 'advance-features-of-talent-lms', loadChildren: './course/advance-features-of-talent-lms/advance-features-of-talent-lms.module#AdvanceFeaturesOfTalentLMSPageModule' },
+  { path: 'content-and-talent-lms', loadChildren: './course/content-and-talent-lms/content-and-talent-lms.module#ContentAndTalentLMSPageModule' },
+  { path: 'e-learning-basics', loadChildren: './course/e-learning-basics/e-learning-basics.module#ELearningBasicsPageModule' }
+
+
 
 
 
