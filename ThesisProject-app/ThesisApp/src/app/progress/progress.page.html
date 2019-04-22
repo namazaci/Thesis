@@ -1,9 +1,67 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>progress</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Progress</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-grid class="dashboard">
+    <ion-row>
+      <ion-col>
+        <ion-item [routerLink]="['/course']" class="activated">
+          <ion-icon name="briefcase" slot="start"></ion-icon>
+          <ion-label>7 Courses</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item class="activated">
+          <ion-icon name="school" slot="start"></ion-icon>
+          <ion-label>0 Certificates</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="activated">
+          <ion-icon name="trophy" slot="start"></ion-icon>
+          <ion-label>0 Badges</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item class="activated">
+          <ion-icon name="stats" slot="start"></ion-icon>
+          <ion-label>1st Level</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="time">
+    <ion-icon name="time"></ion-icon>
+    <ion-label>9m</ion-label>
+  </div>
+    
+  <div class="title">
+    <ion-label>COURSE COMPLETION RATE</ion-label>
+  </div>
+
+  <div class="wrapper">
+    <div class="c100 p25 blue">
+      <span class="text">Completed</span>
+      <span>25%</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="copy">
+    <ion-icon name="copy"></ion-icon>
+    <ion-label>7 courses</ion-label>
+  </div>
 
 </ion-content>
