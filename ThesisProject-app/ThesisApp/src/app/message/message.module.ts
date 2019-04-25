@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
-import { Camera, CameraOriginal } from '@ionic-native/camera';
-import { EmailComposer, EmailComposerOriginal } from '@ionic-native/email-composer';
+import { Camera } from '@ionic-native/camera/ngx';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 import { MessagePage } from './message.page';
 import { EmailService } from '../services/email/email.service';
@@ -25,10 +25,12 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
+  
   declarations: [MessagePage],
+
   providers: [
-    CameraOriginal,
-    EmailComposerOriginal,
+    Camera,
+    EmailComposer,
     EmailService,
     ImageService
   ]

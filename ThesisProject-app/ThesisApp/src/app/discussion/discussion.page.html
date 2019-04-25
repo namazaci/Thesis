@@ -1,9 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>discussion</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>Discussion</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+  <ion-button class="new" (click)="presentNewDiscussion()">New Discussion </ion-button>
 </ion-content>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Camera, CameraOriginal, CameraOptions } from '@ionic-native/camera';
+import { Camera, CameraOptions} from '@ionic-native/camera/ngx';
 import { resolve } from 'q';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { resolve } from 'q';
 })
 export class ImageService {
 
-  constructor(private _CAMERA : CameraOriginal) { }
+  constructor(private _CAMERA : Camera) { }
 
   selectPhotograph() : Promise<any>
   {
