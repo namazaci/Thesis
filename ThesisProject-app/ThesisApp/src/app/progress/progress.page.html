@@ -88,4 +88,8 @@
     <ion-icon name="stats"></ion-icon>
     <ion-label>0% average score</ion-label>
   </div>
+
+  <div class="graph" ng-controller="GraphicCtrl">
+    <canvas id="bar" class="chart chart-bar" data="graph.data" labels="graph.labels" series='graph.series' height="100"></canvas>
+  </div>
 </ion-content>
