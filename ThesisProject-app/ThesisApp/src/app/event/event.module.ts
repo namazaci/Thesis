@@ -5,12 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RolePage } from './role.page';
+import { EventPage } from './event.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: RolePage
+    component: EventPage
   }
 ];
 
@@ -21,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [RolePage]
+  declarations: [EventPage]
 })
-export class RolePageModule {}
+export class EventPageModule {}

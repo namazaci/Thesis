@@ -7,30 +7,31 @@ body {
     cursor: url('https://ionicframework.com/img/finger.png'), auto;
 }
 
-.time ion-icon{
-    font-size: 66px;
-    margin-left: 120px;
-    margin-top: 25px;
-}
-
-.time .label{
-	font-size: 26px;
-	margin-top: 25px;
-}
-
 .copy ion-icon{
-    font-size: 50px;
-    margin-top: 25px;
-    margin-left: 120px;
-    
+    font-size: 1rem;
+}
+
+.copy{
+	margin-top: -153px;
+	margin-left: 205px;
 }
 
 .copy ion-label{
-    margin-left: 134px;
-    margin-bottom: 50px;
+	font-size: 16px;
 }
 
+.ticked ion-icon{
+    font-size: 1rem;
+}
 
+.ticked{
+	margin-top: 19px;
+	margin-left: 197px;
+}
+
+.ticked ion-label{
+	font-size: 16px;
+}
 
 // VARS
 $circle-width: 0.09em;
@@ -43,6 +44,7 @@ $bg-color: #ffffff; //srodkowy bezowy
 
 // colors customized
 $primary-color-blue: #30bae7;
+$primary-color-orange: #eb7d4b; 
 $primary-color-span: #3c4761;
 
 // CIRCLE
@@ -67,7 +69,15 @@ $primary-color-span: #3c4761;
 
 .title{
     margin-top: 35px;
-    margin-left: 25px;
+    margin-left: 43px;
+    color: #748073;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.test{
+    margin-top: 110px;
+    margin-left: 81px;
     color: #748073;
     font-size: 19px;
     font-weight: bold;
@@ -76,6 +86,7 @@ $primary-color-span: #3c4761;
 .wrapper {
   width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 // main
@@ -92,7 +103,7 @@ $primary-color-span: #3c4761;
 	border-radius: 50%;
     float: left;
     margin-top: 0.2em;
-	margin-left: 0.45em;
+	margin-left: 0.1em;
 	background-color: $secondary-color;
 
 // 	// center circle to its parent
@@ -219,6 +230,17 @@ $primary-color-span: #3c4761;
 		&:hover{
 			> span { color: $primary-color-span;}
 		}
-    }
+	}
+	
+	// orange skin
+	&.orange{
+
+		.bar, .fill { border-color: $primary-color-orange !important;}
+
+		&:hover{
+			> span { color: $primary-color-span;}
+		}
+
+	}
 }
 

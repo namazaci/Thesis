@@ -20,6 +20,8 @@ export class CalendarPage implements OnInit {
 
   minDate = new Date().toISOString();
 
+  daysInMonth: number = 31;
+
   eventSource = [];
   viewTitle;
 
@@ -112,9 +114,11 @@ export class CalendarPage implements OnInit {
 
   // Time slot was clicked
   onTimeSelected(ev){
-    let selected = new Date(ev.selctedTime);
-    this.event.startTime = selected.toISOString();
-    selected.setHours(selected.getHours() + 1);
-    this.event.endTime = (selected.toISOString());
+    let date = ev.selectedTime;
+    date.startTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+    date.endTime = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+    // this.event.startTime = ev.selctedTime.toISOString();
+    // ev.selctedTime.setHours(ev.selctedTime.getHours() + 1);
+    // this.event.endTime = (ev.selctedTime.toISOString());
   }
 }

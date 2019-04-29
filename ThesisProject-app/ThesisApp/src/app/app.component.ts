@@ -17,11 +17,6 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Role',
-      url: '/role',
-      icon: 'person'
-    },
-    {
       title: 'Message',
       url: '/message',
       icon: 'mail'

@@ -4,12 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
-import { Camera } from '@ionic-native/camera/ngx';
-import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 import { MessagePage } from './message.page';
-import { EmailService } from '../services/email/email.service';
-import { ImageService } from '../services/image/image.service';
 
 const routes: Routes = [
   {
@@ -29,10 +25,7 @@ const routes: Routes = [
   declarations: [MessagePage],
 
   providers: [
-    Camera,
-    EmailComposer,
-    EmailService,
-    ImageService
+
   ]
 })
 export class MessagePageModule {}
