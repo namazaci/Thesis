@@ -1,7 +1,10 @@
 import { CalendarComponent } from 'ionic2-calendar/calendar';
 import { Component, ViewChild, OnInit, Inject, LOCALE_ID } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ModalController } from '@ionic/angular';
 import { formatDate } from '@angular/common';
+import { Router } from '@angular/router';
+
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-calendar',
@@ -32,7 +35,7 @@ export class CalendarPage implements OnInit {
 
   @ViewChild(CalendarComponent) myCal: CalendarComponent;
   
-  constructor(private alertCtrl: AlertController, @Inject(LOCALE_ID) private locale: string) { }
+  constructor(private alertCtrl: AlertController, @Inject(LOCALE_ID) private locale: string, private router: Router, public modalCtrl: ModalController, public storage: Storage) { }
 
   ngOnInit() {
     this.resetEvent();
@@ -55,7 +58,10 @@ export class CalendarPage implements OnInit {
       startTime: new Date(this.event.startTime),
       endTime: new Date(this.event.endTime),
       allDay: this.event.allDay,
-      desc: this.event.desc
+      handler: () => {
+        this.router.navigateByUrl('/event');
+        console.log('Confirm Ok');
+      }
     }
 
     if(eventCopy.allDay) {
@@ -69,6 +75,23 @@ export class CalendarPage implements OnInit {
     this.eventSource.push(eventCopy);
     this.myCal.loadEvents();
     this.resetEvent();
+
+    let event = {
+      title: 'assignment',
+      date: '8',
+      month: 'May',
+      year: '2019',
+      starttime: '14:59',
+      endtime: '15:59'
+    };
+
+      // set a key/value
+      this.modalCtrl.dismiss({
+        event: event
+      });
+
+
+   
   }
 
   // Chnage current month/week/day
@@ -120,5 +143,10 @@ export class CalendarPage implements OnInit {
     // this.event.startTime = ev.selctedTime.toISOString();
     // ev.selctedTime.setHours(ev.selctedTime.getHours() + 1);
     // this.event.endTime = (ev.selctedTime.toISOString());
+  }
+
+  closeModal()
+  {
+    this.modalCtrl.dismiss({});
   }
 }

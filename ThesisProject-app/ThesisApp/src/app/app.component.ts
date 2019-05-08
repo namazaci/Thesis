@@ -37,8 +37,8 @@ export class AppComponent {
       icon: 'chatbubbles'
     },
     {
-      title: 'Calendar',
-      url: '/calendar',
+      title: 'Event',
+      url: '/event',
       icon: 'calendar'
     },
   ];
