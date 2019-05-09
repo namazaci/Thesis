@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { CalendarPageModule } from './calendar/calendar.module';
 
 import { IonicStorageModule } from '@ionic/storage';
+import { NewDiscussionPageModule } from './new-discussion/new-discussion.module';
+import { NewMessagePageModule } from './new-message/new-message.module';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { IonicStorageModule } from '@ionic/storage';
     }),
     AppRoutingModule,
     CalendarPageModule,
+    NewDiscussionPageModule,
+    NewMessagePageModule,
     IonicStorageModule.forRoot()
   ],
   providers: [

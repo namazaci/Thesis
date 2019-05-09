@@ -24,7 +24,9 @@ const routes: Routes = [
   { path: 'introduction-to-lms', loadChildren: './course/introduction-to-lms/introduction-to-lms.module#IntroductionToLMSPageModule' },
   { path: 'advance-features-of-talent-lms', loadChildren: './course/advance-features-of-talent-lms/advance-features-of-talent-lms.module#AdvanceFeaturesOfTalentLMSPageModule' },
   { path: 'content-and-talent-lms', loadChildren: './course/content-and-talent-lms/content-and-talent-lms.module#ContentAndTalentLMSPageModule' },
-  { path: 'e-learning-basics', loadChildren: './course/e-learning-basics/e-learning-basics.module#ELearningBasicsPageModule' },  { path: 'event', loadChildren: './event/event.module#EventPageModule' }
+  { path: 'e-learning-basics', loadChildren: './course/e-learning-basics/e-learning-basics.module#ELearningBasicsPageModule' },  { path: 'event', loadChildren: './event/event.module#EventPageModule' },
+  { path: 'new-discussion', loadChildren: './new-discussion/new-discussion.module#NewDiscussionPageModule' },
+  { path: 'new-message', loadChildren: './new-message/new-message.module#NewMessagePageModule' }
 
 
 

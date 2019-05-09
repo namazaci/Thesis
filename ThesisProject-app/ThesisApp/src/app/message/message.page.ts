@@ -1,48 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { NewMessagePage } from '../new-message/new-message.page';
+
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'app-message',
   templateUrl: './message.page.html',
   styleUrls: ['./message.page.scss'],
 })
-export class MessagePage {
+export class MessagePage implements OnInit {
 
-  private _attachment : any;
+  private messages = [];
 
-  constructor(
-              private router      : Router) 
+  constructor(public modalController: ModalController, public storage: Storage) 
   {
     
   }
 
-  displayMessage(title : string, subTitle : string) : void
-  {
-    // let alert : any         = this._ALERT.create({
-    //   title       : title,
-    //   subTitle    : subTitle,
-    //   buttons     : ['Got it']
-    // });
-    // alert.present();
+  ngOnInit() {
+    this.storage.get('messages').then(messages => {
+      this.messages = messages;
+    });
   }
 
-  sendMessage() : void
-  {
-    // let to         : string     = this.form.controls["to"].value,
-    //     cc         : string     = this.form.controls["to"].value,
-    //     bcc        : string     = this.form.controls["to"].value,
-    //     subject    : string     = this.form.controls["to"].value,
-    //     message    : string     = this.form.controls["to"].value;
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: NewMessagePage
 
-    // if(this._attachment.length > 1)
-    // {
-    //   this._EMAIL.sendEmail(to, cc, bcc, this._attachment, subject, message);
-    // }
+    });
 
-    // else
-    // {
-    //   this.displayMessage('Error', 'You need to select an attachment');
-    // }
+    modal.onDidDismiss().then(info => {
+      if (info.data.messages !== undefined) this.messages.push(info.data.messages);
+      this.storage.set('messages', this.messages).then(success =>{ console.log('messages saved'); });
+    });
+
+    return await modal.present();
   }
 
 }
