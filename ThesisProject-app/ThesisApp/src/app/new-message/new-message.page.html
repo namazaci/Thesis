@@ -11,28 +11,28 @@
 
 <ion-content padding>
   <form [formGroup]="message" (ngSubmit)="sendMessage()">
-      <ion-item margin-bottom>
-        <ion-label>To:</ion-label>
+      <ion-item>
+        <ion-label position="stacked">To:</ion-label>
         <ion-input type="email" formControlName="to"></ion-input>
       </ion-item>
 
-      <ion-item margin-bottom>
-        <ion-label>Cc:</ion-label>
+      <ion-item>
+        <ion-label position="stacked">Cc:</ion-label>
         <ion-input type="email" formControlName="cc"></ion-input>
       </ion-item>
 
-      <ion-item margin-bottom>
-        <ion-label>Bcc:</ion-label>
+      <ion-item>
+        <ion-label position="stacked">Bcc:</ion-label>
         <ion-input type="email" formControlName="bcc"></ion-input>
       </ion-item>
 
-      <ion-item margin-bottom>
-        <ion-label>Subject:</ion-label>
+      <ion-item>
+        <ion-label position="stacked">Subject:</ion-label>
         <ion-input type="text" formControlName="subject"></ion-input>
       </ion-item>
 
-      <ion-item margin-bottom>
-        <ion-label>Message:</ion-label>
+      <ion-item>
+        <ion-label position="stacked">Message:</ion-label>
         <ion-input type="text"  formControlName="message" block></ion-input>
       </ion-item>
 

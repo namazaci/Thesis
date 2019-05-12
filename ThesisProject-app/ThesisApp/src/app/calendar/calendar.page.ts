@@ -35,7 +35,12 @@ export class CalendarPage implements OnInit {
 
   @ViewChild(CalendarComponent) myCal: CalendarComponent;
   
-  constructor(private alertCtrl: AlertController, @Inject(LOCALE_ID) private locale: string, private router: Router, public modalCtrl: ModalController, public storage: Storage) { }
+  constructor(
+    private alertCtrl: AlertController,
+    @Inject(LOCALE_ID) private locale: string,
+    private router: Router,
+    public modalCtrl: ModalController,
+    public storage: Storage) { }
 
   ngOnInit() {
     this.resetEvent();
@@ -55,39 +60,39 @@ export class CalendarPage implements OnInit {
   addEvent() {
     let eventCopy = {
       title: this.event.title,
-      startTime: new Date(this.event.startTime),
-      endTime: new Date(this.event.endTime),
-      allDay: this.event.allDay,
-      handler: () => {
-        this.router.navigateByUrl('/event');
-        console.log('Confirm Ok');
-      }
+      startTime: new Date(this.event.startTime).getTime() / 1000,
+      endTime: new Date(this.event.endTime).getTime() / 1000,
+      allDay: this.event.allDay
     }
+
+    console.log(eventCopy);
+    
 
     if(eventCopy.allDay) {
       let start = eventCopy.startTime;
       let end = eventCopy.endTime;
 
-      eventCopy.startTime = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate()));
-      eventCopy.endTime = new Date(Date.UTC(start.getUTCFullYear(), end.getUTCMonth(), end.getUTCDate() + 1));
+      let singleDay = 60 * 60 * 24;
+      eventCopy.startTime = Math.floor(eventCopy.startTime / singleDay) * singleDay;
+      eventCopy.endTime = Math.ceil(eventCopy.endTime / singleDay) * singleDay;
     }
 
     this.eventSource.push(eventCopy);
     this.myCal.loadEvents();
     this.resetEvent();
 
-    let event = {
-      title: 'assignment',
-      date: '8',
-      month: 'May',
-      year: '2019',
-      starttime: '14:59',
-      endtime: '15:59'
-    };
+    // let event = {
+    //   title: 'assignment',
+    //   date: '8',
+    //   month: 'May',
+    //   year: '2019',
+    //   starttime: '14:59',
+    //   endtime: '15:59'
+    // };
 
       // set a key/value
       this.modalCtrl.dismiss({
-        event: event
+        event: eventCopy
       });
 
 

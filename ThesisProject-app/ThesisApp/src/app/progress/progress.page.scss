@@ -45,6 +45,9 @@ $bg-color: #ffffff; //srodkowy bezowy
 // colors customized
 $primary-color-blue: #30bae7;
 $primary-color-orange: #eb7d4b; 
+$primary-color-green: #15c7a8;
+$primary-color-lime: #3CB371;
+$primary-color-purple: #9400D3;
 $primary-color-span: #3c4761;
 
 // CIRCLE
@@ -81,6 +84,14 @@ $primary-color-span: #3c4761;
     color: #748073;
     font-size: 19px;
     font-weight: bold;
+}
+
+.Leaderboard{
+	margin-top: 110px;
+	margin-left: 81px;
+	color: #748073;
+	font-size: 19px;
+	font-weight: bold;
 }
 
 .wrapper {
@@ -243,22 +254,37 @@ $primary-color-span: #3c4761;
 
 	}
 
-	.graph{
-		margin-top: 100px;
+	// lime skin
+	&.lime{
+
+		.bar, .fill { border-color: $primary-color-lime !important;}
+
+		&:hover{
+			> span { color: $primary-color-span;}
+		}
+
 	}
-	.container {
-		width: 100%; /* Full width */
-		background-color: #ddd; /* Grey background */
-	  }
-	  
-	  .skills {
-		text-align: right; /* Right-align text */
-		padding: 10px; /* Add some padding */
-		color: white; /* White text color */
-	  }
-	  
-	  .html {width: 90%; background-color: #4CAF50;} /* Green */
-	  .css {width: 80%; background-color: #2196F3;} /* Blue */
-	  .js {width: 65%; background-color: #f44336;} /* Red */
-	  .php {width: 60%; background-color: #808080;} /* Dark Grey */
+
+	// green skin
+	&.green{
+
+		.bar, .fill { border-color: $primary-color-green !important;}
+
+		&:hover{
+			> span { color: $primary-color-span;}
+		}
+
+	}
+
+	// purple skin
+	&.purple{
+
+		.bar, .fill { border-color: $primary-color-purple !important;}
+
+		&:hover{
+			> span { color: $primary-color-span;}
+		}
+
+	}
+
 }

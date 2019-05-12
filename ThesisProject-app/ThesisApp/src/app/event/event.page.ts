@@ -13,17 +13,19 @@ export class EventPage implements OnInit {
 
   public events = [];
 
+  public filteredEvents = [];
+
   constructor(public modalController: ModalController, public storage: Storage) { }
 
   ngOnInit() {
 
     // Or to get a key/value pair
     this.storage.get('events').then(events => {
-      this.events = events;
-    });
+      this.setEvents(events);
+    }); 
   }
 
-  async presentModal() {
+  async presentCalendarModal() {
     const modal = await this.modalController.create({
       component: CalendarPage
 
@@ -35,6 +37,39 @@ export class EventPage implements OnInit {
     });
     
     return await modal.present();
+  }
+
+  setEvents(events:any[])
+  {
+    this.events = events;
+
+    this.filteredEvents = [];
+    events.forEach(item => {
+      
+      let foundIndex = -1;
+      this.filteredEvents.filter((ev, index) => {
+        if (ev.date.day == item.date && ev.date.month == item.month && ev.date.year == item.year) foundIndex = index;
+      });
+      
+      console.log(foundIndex);
+      if (foundIndex > -1)
+      {
+        this.filteredEvents[foundIndex].events.push(item);
+      }
+      else
+      {
+        this.filteredEvents.push({
+          date: {
+            day: item.date,
+            month: item.month,
+            year: item.year
+          },
+          events: [ item ]
+        });
+      }
+    });
+
+    console.log(this.filteredEvents);
   }
 
 }

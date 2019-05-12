@@ -10,19 +10,22 @@
 </ion-header>
 
 <ion-content padding>
-  <form [formGroup]="todo" (ngSubmit)="logForm()">
+  <form [formGroup]="discussion" (ngSubmit)="closeForm()">
     <ion-item>
-      <ion-label>New Topic</ion-label>
+      <ion-label position="stacked">Subject</ion-label>
       <ion-input type="text" formControlName="title"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Description</ion-label>
+      <ion-label position="stacked">Description</ion-label>
       <ion-textarea formControlName="description"></ion-textarea>
     </ion-item>
     <ion-item>
-      <ion-select formControlName="everybody" okText="Okay" cancelText="Dismiss">
+      <ion-select formControlName="visibility" okText="OK" cancelText="Cancel"> 
+        <ion-select-option vlaue="everybody" selected="true">Everybody</ion-select-option>
+        <ion-select-option vlaue="friends">Friends</ion-select-option>
+        <ion-select-option vlaue="me">Everybody</ion-select-option>
       </ion-select>
     </ion-item>
-    <button ion-button type="submit" [disabled]="!todo.valid">Submit</button>
+    <button ion-button type="submit" [disabled]="!discussion.valid">Submit</button>
   </form>
 </ion-content>

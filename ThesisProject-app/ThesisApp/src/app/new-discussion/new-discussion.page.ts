@@ -11,32 +11,35 @@ import { Storage } from '@ionic/storage';
 })
 export class NewDiscussionPage implements OnInit {
 
-  public todo : FormGroup;
+  public discussion : FormGroup;
 
-  constructor( public formBuilder: FormBuilder, public modalCtrl: ModalController, public storage: Storage ) { 
+  constructor( 
+    public formBuilder: FormBuilder, 
+    public modalCtrl: ModalController, 
+    public storage: Storage ) { 
 
-    this.todo = this.formBuilder.group({
+    this.discussion = this.formBuilder.group({
       title: ['', Validators.required],
       description: [''],
-      everybody: [''],
-      friends: [''],
-      me: ['']
+      visibility: ['everybody']
     });
 
-    // set a key/value
-    this.modalCtrl.dismiss({
-      todo: this.todo
-    });
+    
   }
 
-  logForm(){
-    console.log(this.todo.value)
+  closeForm(){
+    // set a key/value
+    this.modalCtrl.dismiss({
+      discussion: this.discussion.value
+    });
   }
 
   
   ngOnInit() {
+
   }
 
+  
   closeModal()
   {
     this.modalCtrl.dismiss({});

@@ -14,12 +14,13 @@ export class DiscussionPage implements OnInit {
   public discussions = [];
 
   constructor(
-    public modalController: ModalController, public storage: Storage
+    public modalController: ModalController, 
+    public storage: Storage
   ) { }
 
   ngOnInit() {
     this.storage.get('discussions').then(discussions => {
-      this.discussions = discussions;
+      this.discussions = discussions || [];
     });
   }
 
@@ -30,8 +31,8 @@ export class DiscussionPage implements OnInit {
     });
 
     modal.onDidDismiss().then(info => {
-      if (info.data.discussions !== undefined) this.discussions.push(info.data.discussions);
-      this.storage.set('discussions', this.discussions).then(success =>{ console.log('discussions saved'); });
+      if (info.data.discussion !== undefined) this.discussions.push(info.data.discussion);
+      this.storage.set('discussions', this.discussions).then(success =>{ console.log(success); });
     });
 
     return await modal.present();

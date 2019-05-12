@@ -14,14 +14,13 @@ export class MessagePage implements OnInit {
 
   private messages = [];
 
-  constructor(public modalController: ModalController, public storage: Storage) 
-  {
-    
-  }
+  constructor(public modalController: ModalController, 
+    public storage: Storage
+    ){}
 
   ngOnInit() {
     this.storage.get('messages').then(messages => {
-      this.messages = messages;
+      this.messages = messages || [];
     });
   }
 
@@ -32,8 +31,8 @@ export class MessagePage implements OnInit {
     });
 
     modal.onDidDismiss().then(info => {
-      if (info.data.messages !== undefined) this.messages.push(info.data.messages);
-      this.storage.set('messages', this.messages).then(success =>{ console.log('messages saved'); });
+      if (info.data.message !== undefined) this.messages.push(info.data.message);
+      this.storage.set('messages', this.messages).then(success =>{ console.log(success); });
     });
 
     return await modal.present();

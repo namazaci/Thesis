@@ -13,7 +13,9 @@ export class NewMessagePage implements OnInit {
 
   public message : FormGroup;
 
-  constructor(public formBuilder: FormBuilder, public modalCtrl: ModalController, public storage: Storage) {
+  constructor(public formBuilder: FormBuilder, 
+    public modalCtrl: ModalController, 
+    public storage: Storage) {
 
     this.message = this.formBuilder.group({
       to: ['', Validators.required],
@@ -23,14 +25,14 @@ export class NewMessagePage implements OnInit {
       message: ['']
     });
 
-     // set a key/value
-     this.modalCtrl.dismiss({
-      message: this.message
-    });
+     
    }
 
    sendMessage(){
-    console.log(this.message.value)
+    // set a key/value
+    this.modalCtrl.dismiss({
+      message: this.message.value
+    });
   }
 
   ngOnInit() {
