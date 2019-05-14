@@ -12,7 +12,7 @@ import { Storage } from '@ionic/storage';
 })
 export class MessagePage implements OnInit {
 
-  private messages = [];
+  public messages = [];
 
   constructor(public modalController: ModalController, 
     public storage: Storage

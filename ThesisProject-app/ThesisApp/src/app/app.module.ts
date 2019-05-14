@@ -14,6 +14,10 @@ import { IonicStorageModule } from '@ionic/storage';
 import { NewDiscussionPageModule } from './new-discussion/new-discussion.module';
 import { NewMessagePageModule } from './new-message/new-message.module';
 
+import { File } from '@ionic-native/File/ngx';
+import { FileOpener } from '@ionic-native/file-opener/ngx';
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
+import { DocumentViewer } from '@ionic-native/document-viewer/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,7 +36,11 @@ import { NewMessagePageModule } from './new-message/new-message.module';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    File,
+    FileOpener,
+    FileTransfer,
+    DocumentViewer
   ],
   bootstrap: [AppComponent]
 })

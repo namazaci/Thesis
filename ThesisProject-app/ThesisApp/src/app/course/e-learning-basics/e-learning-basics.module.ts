@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { ELearningBasicsPage } from './e-learning-basics.page';
 
+
 const routes: Routes = [
   {
     path: '',

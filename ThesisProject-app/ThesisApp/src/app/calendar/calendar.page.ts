@@ -13,6 +13,8 @@ import { Storage } from '@ionic/storage';
 })
 export class CalendarPage implements OnInit {
   
+  public collapseCard: boolean = false;
+
   event = {
     title: '',
     desc: '',
