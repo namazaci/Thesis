@@ -21,7 +21,7 @@ export class EventPage implements OnInit {
 
     // Or to get a key/value pair
     this.storage.get('events').then(events => {
-      this.setEvents(events);
+      this.setEvents(events || []);
     }); 
   }
 
