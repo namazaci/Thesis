@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Course</ion-title>
+  </ion-toolbar>
+</ion-header>
+    
+
+<ion-content padding>
+    <ion-list>
+        <ion-item [routerLink]="['/introduction-to-lms']" class="activated">
+          <ion-img src="/assets/courses/course1.png"></ion-img>
+          <ion-label>Introduction to TalentLMS</ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/advance-features-of-talent-lms']" class="activated">
+          <ion-img src="/assets/courses/course2.png"></ion-img>
+          <ion-label class="course">Advance features of TalentLMS</ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/content-and-talent-lms']" class="activated">
+          <ion-img src="/assets/courses/course3.png"></ion-img>
+          <ion-label>Content and TalentLMS</ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/e-learning-basics']" class="activated">
+          <ion-img src="/assets/courses/course4.png"></ion-img>
+          <ion-label>eLearning Basics</ion-label>
+        </ion-item>
+      </ion-list>
+</ion-content>

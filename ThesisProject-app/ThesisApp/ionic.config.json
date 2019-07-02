@@ -1,0 +1,7 @@
+{
+  "name": "ThesisApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

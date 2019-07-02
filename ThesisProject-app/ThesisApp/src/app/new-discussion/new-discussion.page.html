@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>New Discussion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="discussion" (ngSubmit)="closeForm()">
+    <ion-item>
+      <ion-label position="stacked">Subject</ion-label>
+      <ion-input type="text" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Description</ion-label>
+      <ion-textarea formControlName="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-select formControlName="visibility" okText="OK" cancelText="Cancel"> 
+        <ion-select-option vlaue="everybody" selected="true">Everybody</ion-select-option>
+        <ion-select-option vlaue="friends">Friends</ion-select-option>
+        <ion-select-option vlaue="me">Everybody</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <button ion-button type="submit" [disabled]="!discussion.valid">Submit</button>
+  </form>
+</ion-content>

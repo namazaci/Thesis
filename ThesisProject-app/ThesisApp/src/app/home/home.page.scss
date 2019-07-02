@@ -1,0 +1,30 @@
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+.logo ion-img {
+  max-height: 20vh;
+  overflow: hidden;
+  width: 76%;
+}
+
+ion-searchbar {
+  --ion-background-color: #ffffff;
+}
+
+ion-card{
+  --ion-background-color: #ffffff;
+} 
+
+.course2 ion-card > ion-img:hover{
+  --ion-background-color:#000000;
+  --ion-opacity: 70%;
+}
+/* .logo ion-buttons .points {
+  margin-left: -100px;
+} */

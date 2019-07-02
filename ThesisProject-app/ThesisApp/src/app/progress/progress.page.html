@@ -1,0 +1,125 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Progress</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="dashboard">
+    <ion-row>
+      <ion-col>
+        <ion-item [routerLink]="['/course']" class="activated">
+          <ion-icon name="briefcase" slot="start"></ion-icon>
+          <ion-label>7 Courses</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item class="activated">
+          <ion-icon name="school" slot="start"></ion-icon>
+          <ion-label>0 Certificates</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="activated">
+          <ion-icon name="trophy" slot="start"></ion-icon>
+          <ion-label>0 Badges</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item class="activated">
+          <ion-icon name="stats" slot="start"></ion-icon>
+          <ion-label>1st Level</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="title">
+    <ion-label>COURSE COMPLETION RATE</ion-label>
+  </div>
+
+  <div class="wrapper">
+    <div class="c100 p25 blue">
+      <span class="text">Completed</span>
+      <span>25%</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="copy">
+    <ion-icon name="create"></ion-icon>
+    <ion-label>7 courses</ion-label>
+  </div>
+
+  <div class="ticked">
+    <ion-icon name="done-all"></ion-icon>
+    <ion-label>0 completions</ion-label>
+  </div>
+
+  <div class="test">
+    <ion-label>TEST PASS RATE</ion-label>
+  </div>
+
+  <div class="wrapper">
+    <div class="c100 p75 orange">
+      <span class="text">Completed</span>
+      <span>75%</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="copy">
+    <ion-icon name="copy"></ion-icon>
+    <ion-label>0 executions</ion-label>
+  </div>
+
+  <div class="ticked">
+    <ion-icon name="stats"></ion-icon>
+    <ion-label>0% average score</ion-label>
+  </div>
+
+  <div class="Leaderboard">
+      <ion-label>USER LEADERBOARD</ion-label>
+    </div>
+     
+    <div class="wrapper">
+      <div class="c100 p60 green">
+        <span class="text">User 1</span>
+        <div class="slice">
+          <div class="bar"></div>
+          <div class="fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="c100 p50 lime">
+        <span class="text">User 2</span>
+        <div class="slice">
+          <div class="bar"></div>
+          <div class="fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="c100 p40 purple">
+        <span class="text">User 3</span>
+        <div class="slice">
+          <div class="bar"></div>
+          <div class="fill"></div>
+        </div>
+      </div>
+    </div>
+</ion-content>

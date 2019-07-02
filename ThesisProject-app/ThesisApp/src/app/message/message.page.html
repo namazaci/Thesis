@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Message</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div *ngFor="let message of messages">
+        <ion-list>
+          <ion-item>
+            <ion-label>{{message.to}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{message.cc}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{message.bcc}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{message.subject}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{message.message}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="presentModal()">
+        <ion-icon name="arrow-dropleft"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+</ion-content>
